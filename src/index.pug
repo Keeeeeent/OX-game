@@ -1,14 +1,26 @@
 doctype html
-html
+html(lang="ja")
     head
         meta(charset="utf-8")
-        title ○×ゲーム
+        title ○×ゲーム by さくらぼ.com
     body
         h1 ○×ゲーム
+        .game-controller
+            span(id="turn") ×のターン
+            button(id="reset") reset
         .game-board
             - for(var y = 0; y < 3; y++)
                 .raw
                     - for(var x = 0; x < 3; x++)
                         .cell
                             span(id= y + "." + x) 
+            small © さくらぼ.com 
+        .rulus
+            h2 使用方法
+            p 
+                ol
+                    li ×のターンから開始されます
+                    li 先に縦・横・斜めにそろえた方が勝利
+                    li 勝者が決まり次第ゲームは終了します
+                |※再度ゲームを楽しみたい場合は画面のリロードをしてください
         script(src="main.js")
