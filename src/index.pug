@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title ○×ゲーム
+    body
+        h1 ○×ゲーム
+        .game-board
+            - for(var y = 0; y < 3; y++)
+                .raw
+                    - for(var x = 0; x < 3; x++)
+                        .cell
+                            span(id= y + "." + x) 
+        script(src="main.js")
